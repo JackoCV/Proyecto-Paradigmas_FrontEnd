@@ -10,6 +10,7 @@ const Mocion = (props) => {
     id: null,
     texto: "",
     fecha: false,
+    tipom:  null,
   };
   const initialTipoMocion ={
     id:null,
@@ -71,14 +72,9 @@ const Mocion = (props) => {
     
   };
 
-  const handleInputChange2 = (event) => {
-    const { name, value } = event.target;
-    setCurrentTipoMocion({ ...currentTipoMocion, [name]: value });
-  };
 
   const updateMocion = () => {
-    console.log(currentMocion.i);
-    MocionService.edit(currentMocion,currentTipoMocion.id)
+    MocionService.edit(currentMocion,currentMocion.tipom)
       .then((response) => {
         console.log(response.data);
         setMessage("La mocion fue actualizada");
@@ -130,7 +126,7 @@ const Mocion = (props) => {
 
             <div className="form-group"> 
               <label htmlFor="id">Tipo</label>
-              <select name = "id" id="id" placeholder="seleccione una opcion"  onChange={handleInputChange2}>
+              <select name = "tipom" id="tipom" placeholder="seleccione una opcion"  onChange={handleInputChange}>
               <option value= "0" >escoja</option>
                 {valores}
               </select>
