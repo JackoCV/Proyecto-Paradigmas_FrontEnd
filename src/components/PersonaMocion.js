@@ -142,17 +142,17 @@ const PersonaMocion = (props) => {
           <h4>Mocion</h4>
           <form>
             
-            <div className="form-group"> 
-              <label htmlFor="persona">Persona</label>
-              <select name = "persona" id="persona" select={currentPersona.id} placeholder="seleccione una opcion"  onChange={handleInputChange3}>
+          <div className="form-group"> 
+              <label htmlFor="id">Persona</label>
+              <select name = "id" id="id"  placeholder="seleccione una opcion"  onChange={handleInputChange3}>
               <option>Seleccione una opcion</option>
                 {valoresPersona}
               </select>
             </div>
             
-            <div className="form-group"> 
-              <label htmlFor="mocion">Mocion</label>
-              <select name = "mocion" id="mocion" select={currentMocion.id} placeholder="seleccione una opcion"  onChange={handleInputChange2}>
+              <div className="form-group"> 
+              <label htmlFor="id">Mocion</label>
+              <select name = "id" id="id"  placeholder="seleccione una opcion"  onChange={handleInputChange2}>
               <option>Seleccione una opcion</option>
                 {valoresMocion}
               </select>
