@@ -44,7 +44,7 @@ const LogList = () => {
                 onClick={() => setActiveLog(log, index)}
                 key={index}
               >
-                {log.Metodo}
+                {log.metodo}
               </li>
             ))}
         </ul>
@@ -57,19 +57,19 @@ const LogList = () => {
               <label>
                 <strong>Identificacion:</strong>
               </label>{" "}
-              {currentLog.Id}
+              {currentLog.id}
             </div>
             <div>
               <label>
                 <strong>Metodo:</strong>
               </label>{" "}
-              {currentLog.Metodo}
+              {currentLog.metodo}
             </div>
             <div>
               <label>
                 <strong>Fecha:</strong>
               </label>{" "}
-              {currentLog.Fecha}
+              {currentLog.fecha}
             </div>
           </div>
         ) : (
